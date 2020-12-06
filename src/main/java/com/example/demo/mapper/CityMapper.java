@@ -19,7 +19,9 @@ import com.example.demo.domain.City;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Component;
 
+@Component
 @Mapper
 public interface CityMapper {
 
