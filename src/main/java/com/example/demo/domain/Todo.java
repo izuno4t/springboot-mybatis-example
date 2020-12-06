@@ -23,16 +23,15 @@ import java.io.Serializable;
  * @author Eddú Meléndez
  */
 @Data
-public class City implements Serializable {
+public class Todo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Long id;
+    private int id;
 
-    private String name;
+    private String title;
 
-    private String state;
+    private String details;
 
-    private String country;
-
+    private boolean finished;
 }

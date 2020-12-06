@@ -1,5 +1,5 @@
 /**
- * Copyright 2015-2019 the original author or authors.
+ * Copyright 2015-2020 the original author or authors.
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,26 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.demo.domain;
+package com.example.demo.mapper;
 
-import lombok.Data;
+import com.example.demo.domain.Todo;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
-import java.io.Serializable;
+@Component
+@Mapper
+public interface TodoMapper {
 
-/**
- * @author Eddú Meléndez
- */
-@Data
-public class City implements Serializable {
+  void insert(Todo todo);
 
-    private static final long serialVersionUID = 1L;
-
-    private Long id;
-
-    private String name;
-
-    private String state;
-
-    private String country;
-
+  /**
+   * @param id
+   * @return
+   */
+  Todo selectById(int id);
 }
