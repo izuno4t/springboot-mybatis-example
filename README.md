@@ -16,3 +16,4 @@ Tutorial from [mybatis-spring-boot-sample-web](https://github.com/mybatis/spring
 - [mybatis-spring-boot-starter 2.0の変更点](https://qiita.com/kazuki43zoo/items/38a24e051359e39c012c)
 - [【問題解決】MyBatisのTestで「Failed to replace DataSource with an embedded database for tests. 」というエラー発生](https://qiita.com/yuji38kwmt/items/44c972e76aa2ff07dd89)
 - [qiita-materials/mybatis-spring-boot/mybatis-demo/](https://github.com/kazuki43zoo/qiita-materials/tree/master/mybatis-spring-boot/mybatis-demo)
+- [MyBatis Migrations](http://mybatis.org/migrations/)
