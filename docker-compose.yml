@@ -2,7 +2,7 @@ version: '3.3'
 services:
   db:
     build: ./docker/postgres
-    restart: always
+#    restart: always
     environment:
       TZ: Asia/Tokyo
       POSTGRES_DB: sample
@@ -15,4 +15,17 @@ services:
     volumes:
       - ./docker/postgres/conf.d:/etc/postgresql
       - ./log/postgres:/var/log/postgresql
-
+  testdb:
+    build: ./docker/postgres
+    environment:
+      TZ: Asia/Tokyo
+      POSTGRES_DB: sample-test
+      POSTGRES_USER: sample
+      POSTGRES_PASSWORD: sample
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=ja_JP.UTF-8"
+    command: 'postgres -c config_file="/etc/postgresql/postgresql.conf"'
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./docker/postgres/conf.d:/etc/postgresql
+      - ./log/postgres:/var/log/postgresql-test

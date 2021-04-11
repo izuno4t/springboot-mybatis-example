@@ -15,9 +15,9 @@
  */
 package com.example.demo.domain;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * @author Eddú Meléndez
@@ -33,5 +33,5 @@ public class Todo implements Serializable {
 
     private String details;
 
-    private boolean finished;
+    private String finished;
 }
