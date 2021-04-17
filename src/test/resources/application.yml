@@ -8,7 +8,7 @@ spring:
     datasource:
         driver-class-name: org.postgresql.Driver
         password: ${POSTGRES_PASSWORD:sample}
-        url: jdbc:postgresql://localhost:5433/${POSTGRES_TEST_DB:sample-test}
+        url: jdbc:postgresql://localhost:${POSTGRES_PORT:5433}/${POSTGRES_DB:sample-test}
         username: ${POSTGRES_USERNAME:sample}
     jpa:
         hibernate:
