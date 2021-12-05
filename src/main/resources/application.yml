@@ -4,9 +4,9 @@ logging:
 spring:
     datasource:
         driver-class-name: org.postgresql.Driver
-        password: ${POSTGRES_PASSWORD:sample}
-        url: jdbc:postgresql://localhost:${POSTGRES_PORT:5432}/${POSTGRES_DB:sample}
-        username: ${POSTGRES_USERNAME:sample}
+        password: ${POSTGRES_PASSWORD:example}
+        url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:example}
+        username: ${POSTGRES_USERNAME:example}
     jpa:
         hibernate:
             ddl-auto: update
